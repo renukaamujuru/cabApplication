@@ -1,0 +1,42 @@
+.container {
+  width: auto;
+  height: auto;
+  float: left;
+}
+
+.banner {
+  border-style: groove;
+  width: auto;
+  height: auto;
+  margin: 20px;
+  padding: 10px;
+}
+
+.banner1 {
+  border-style: groove;
+  width: auto;
+  height: auto;
+ 
+}
+.banner1 img{
+    margin: 20px;
+}
+.img-responsive{
+   
+    margin-left: 20px;
+    padding: 10px;
+    width: 75%;
+    height: 120px;
+}
+.banner1 h2{
+     text-align: center;
+}
+
+.box {
+  border-style: groove;
+  width: auto;
+  height: auto;
+  float: left;
+  margin: 20px;
+  padding: 10px;
+}

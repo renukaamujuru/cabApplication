@@ -1,0 +1,119 @@
+<div class="banner2">
+	<div class="container" >
+    <h1 style="text-align: center;color: lightgray;margin-bottom: 5px;">Sign Up To Take A Ride</h1><br>
+    <h3 style="text-align: center;color: lightgray;margin-top: 0px;;margin-bottom: 0px;">Safe Reliable Rides In Minutes</h3>
+			<div class="row main">
+				<div class="main-login main-center">
+          
+					<form [formGroup]="form" name="form" (ngSubmit)="onSubmit(form)">
+						
+						<div class="form-group">
+              <br>
+							<label for="name" class="cols-sm-2 control-label">Your Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="name" id="name" formControlName="name"  placeholder="Enter your Name" />
+                </div>
+                <div class="btn btn-danger" *ngIf="form.get('name').touched && form.get('name').invalid">
+					<div *ngIf="name.errors.required">name required</div>
+                 <div *ngIf="name.errors.minlength">3 chars required</div>
+                 <div *ngIf="name.errors.maxlength">max 20 required</div>
+				
+				</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="email" id="email" formControlName="email" placeholder="Enter your Email"  />
+                </div>
+                 <div class="btn btn-danger" *ngIf="form.get('email').touched && form.get('email').invalid">
+				<div *ngIf="email.errors.required">email required</div>
+                 <div *ngIf="email.errors.minlength">11 chars required</div>
+                 <div *ngIf="email.errors.maxlength">max 30 required</div>
+				
+				</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username" formControlName="username" placeholder="Enter your Username"  />
+                </div>
+                <div class="btn btn-danger" *ngIf="form.get('username').touched && form.get('username').invalid">
+				 <div *ngIf="username.errors.required">username required</div>
+                 <div *ngIf="username.errors.minlength">3 chars required</div>
+                 <div *ngIf="username.errors.maxlength">max 20 required</div>
+				
+				</div>
+                
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password" formControlName="password" placeholder="Enter your Password"  />
+                </div>
+                <div class="btn btn-danger" *ngIf="form.get('password').touched && form.get('password').invalid">
+				
+                 <div *ngIf="password.errors.required">password required</div>
+                 <div *ngIf="password.errors.minlength">8 chars required</div>
+                 <div *ngIf="password.errors.maxlength">max 20 required</div>
+				
+				</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm" formControlName="confirm" placeholder="Confirm your Password"  required autofous/>
+                </div>
+                 <div class="btn btn-danger" *ngIf="form.get('confirm').touched && form.get('confirm').value!== form.get('password').value">
+					 
+				 password does not match
+				
+				</div>
+							</div>
+						</div>
+
+
+					<div class="form-group">
+							<label for="phoneNumber" class="cols-sm-2 control-label">Your Mobile Number</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+									<input type="number" class="form-control" name="phoneNumber" id="phoneNumber" formControlName="phoneNumber" placeholder="Enter your Mobile Number"  />
+                </div>
+                 <div class="btn btn-danger" *ngIf="form.get('phoneNumber').touched && form.get('phoneNumber').invalid">
+				<div *ngIf="phoneNumber.errors.required">phoneNumber required</div>
+                 <div *ngIf="phoneNumber.errors.minlength">10 chars required</div>
+            
+				
+				</div>
+							</div>
+						</div>								
+
+
+						<div class="form-group ">
+							 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="form.invalid">Register</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+    </div>
+    </div>
+

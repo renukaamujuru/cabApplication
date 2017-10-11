@@ -1,0 +1,19 @@
+<nav class="navbar " style="background-color: lightskyblue; margin-bottom: 10px;">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand">cab name</a>
+  </div>
+          <ul class="nav navbar-nav">
+            <li *ngFor="let leftitem of navlist"><a [routerLink]="['/'+leftitem.link.toLowerCase()]">{{leftitem.name}}</a></li>
+           
+          </ul>
+           <ul class="nav navbar-nav  navbar-right">
+           <li  *ngFor="let rightitem of rightitems"><a [routerLink]="['/'+rightitem.link.toLowerCase()]"><i class="fa fa-user fa" aria-hidden="true"></i>{{rightitem.name}}</a></li>
+             </ul>
+</div>
+</nav>
+<router-outlet></router-outlet>
+<app-usercabchoosingpage></app-usercabchoosingpage>
+
+
+

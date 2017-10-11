@@ -1,0 +1,64 @@
+<!-- <div class="container">
+  <div class="card card-container banner">
+
+    <div class="row">
+      <form [formGroup]="form" name="form">
+
+        <div class="col-sm-8 col-md-6 col-lg-7 col-xs-12">
+          <h1>Pick Up Location</h1>
+          <div class="col-sm-8 col-md-6 col-lg-8 col-xs-12">
+            <input type="text" formControlName="location" name="location" class="form-control" placeholder=" choose  location" [(ngModel)]="locationName">
+          </div>
+          <div class="btn btn-danger" *ngIf="form.get('location').touched && form.get('location').invalid">
+            <div *ngIf="location.errors.required">*mandatory field</div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-8 col-md-6 col-lg-7 col-xs-12">
+          <h1>Choose Your Destination</h1>
+          <div class="col-sm-8 col-md-6 col-lg-8 col-xs-12">
+            <input type="text" formControlName="destination" name="destination" class="form-control" placeholder="Enter Destination"
+              [(ngModel)]="destinationValue">
+          </div>
+          <div class="btn btn-danger" *ngIf="form.get('destination').touched && form.get('destination').invalid">
+            <div *ngIf="destination.errors.required">*mandatory field</div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12">
+          <h1>Choose Your Cab</h1>
+          <div class="container banner1 well">
+            <div class="row">
+              <div class="col-xs-10 col-sm-7 col-md-7 col-lg-4">
+                <img class="img-responsive img-thumbnail" src="/assets/image/m1.jpg">
+                <h2>Micro</h2>
+              </div>
+              <div class=" col-xs-10 col-sm-7 col-md-7 col-lg-4">
+                <img class="img-responsive img-thumbnail" src="/assets/image/m2.png">
+                <h2>Mini</h2>
+              </div>
+              <div class=" col-xs-10 col-sm-7 col-md-7 col-lg-4">
+                <img class="img-responsive img-thumbnail" src="/assets/image/m3.jpg">
+                <h2>Lux</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-xs-12 col-md-10 col-lg 7">
+          <div class="form-group">
+            <button class="btn btn-md btn-primary btn-signin" name="submit" type="submit" [disabled]="form.invalid" (click)="submit(form)">Check Your Fare </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+<div class="container">
+  <div class="box">
+    <app-uspgbody2 [inputedData]="enteredDetails"></app-uspgbody2>
+  </div>
+</div> -->

@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-7 col-md-7 col-lg-7 col-xs-8">
+    <div class="form-group">
+      <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+        #search [formControl]="searchControl">
+    </div>
+  </div>
+  <div class="col-sm-7 col-md-7 col-lg-7 col-xs-8">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    </agm-map>
+ </div>
+ 
+
+</div>

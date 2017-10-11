@@ -1,0 +1,71 @@
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+  
+<div class="container banner">
+
+  <div class="card card-container">
+    <h1 class="login">Login</h1>
+    <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+    <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin" name="form" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+      <span id="reauth-email" class="reauth-email"></span>
+      <input type="email" id="inputEmail" formControlName="email"  class="form-control"
+        placeholder="Email address" required autofocus >
+
+      <div class="btn btn-danger" *ngIf="form.get('email').touched && form.get('email').invalid">
+        <div *ngIf="email.errors.required">Email Id required</div>
+        <div *ngIf="email.errors.minlength">minimum 11 characters required</div>
+        <div *ngIf="email.errors.maxlength">30 characters is maximum</div>
+      </div>
+
+      <input type="password" id="inputPassword" formControlName="password" class="form-control"
+        placeholder="Password" required autofocus>
+
+      <div class="btn btn-danger" *ngIf="form.get('password').touched && form.get('password').invalid">
+        <div *ngIf="password.errors.required">password required</div>
+        <div *ngIf="password.errors.minlength">minimum 8 charcters required</div>
+        <div *ngIf="password.errors.maxlength">20 maximum characters</div>
+
+      </div>
+
+      <div id="remember" class="checkbox">
+        <label>
+                <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="form.invalid">Sign in</button>
+    </form>
+    <!-- /form -->
+
+
+    <a routerLink="/register" class="not-registered">Not Registered?   </a>
+
+    <a routerLink="/forgotpassword" class="forgot-password">
+                Forgot the password?
+            </a>
+  </div>
+  <!-- /card-container -->
+</div>
+<!-- /container -->
+<router-outlet>
+  </router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

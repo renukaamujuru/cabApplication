@@ -1,0 +1,53 @@
+.container {
+  width: auto;
+  height: auto;
+  float: left;
+}
+
+.card-container {
+  width: auto;
+  height: auto;
+  margin: 20px;
+  padding: 10px;
+}
+
+.banner1 {
+  border-style: groove;
+  width: auto;
+  height: auto;
+}
+
+.banner1 img {
+  margin: 20px;
+}
+
+.img-responsive {
+  margin-left: 20px;
+  padding: 10px;
+  width: 75%;
+  height: 120px;
+}
+
+.banner1 h2 {
+  text-align: center;
+ 
+}
+.box,.col-sm-6 {
+    width: auto;
+    margin: 10px;
+}
+
+.box {
+  border-style: groove;
+  width: auto;
+  height: auto;
+  visibility: hidden;
+  float: right;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.img-responsive:hover {
+  box-shadow: 10px 10px 5px grey;
+}
