@@ -19,7 +19,7 @@ app.post('/api/register',user.registerUser);
 app.post('/api/login',user.loginUser);
 app.post('/api/forgotpassword',user.forgotpassword);
 app.post('/api/UserEnteredData',user.UserEnteredData);
-// app.get('/api/getUserEnteredData',user.getUserEnteredData);
+app.get('/api/getUserEnteredData/:id',user.getUserEnteredData);
 var port=3456;
 app.listen(port,()=>{
     console.log("you are running on port",port);

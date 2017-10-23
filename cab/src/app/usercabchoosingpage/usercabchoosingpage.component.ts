@@ -109,14 +109,14 @@ export class usercabchoosingpageComponent implements OnInit {
     }];
     console.log(this.enteredDetails);
     this.toggoleShowHide = "visible";
-    this.service.postUserEnteredData(this.enteredDetails).subscribe(response=>{
-      console.log(response);
-      let m=response.json();
-      if(m.status==true){
-        console.log("u have posted ur loc and des");
-      }
+    // this.service.postUserEnteredData(this.enteredDetails).subscribe(response=>{
+    //   console.log(response);
+    //   let m=response.json();
+    //   if(m.status==true){
+    //     console.log("u have posted ur loc and des");
+    //   }
      
-      })
+    //   })
 
   }
 

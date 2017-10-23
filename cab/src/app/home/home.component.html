@@ -1,8 +1,80 @@
-<div class="paralla"></div>
+<div class="container" id="borderimg3">
+  <div class="row profile">
+    <div class="col-md-4">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <img src="http://trendingfan.com/wp-content/uploads/2017/07/Cute-Asian-Girls-Dancing-HD-Wallpaper-800x450.jpg" class="img-responsive"
+            alt="">
+        </div>
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            {{username}}
+          </div>
+          <div class="profile-usertitle-job">
+            Rider
+          </div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+          <button type="button" class="btn btn-danger btn-sm" (click)="rateNowOutput()">Rate Now</button>
+          <button type="button" id="like" class="btn btn-primary btn-md" (click)="likeOutput()" [disabled]="disabled"><i class="fa fa-thumbs-o-up fa" ></i> like</button>      
+        </div>
 
-<div style="height:400px;background-color:black;font-size:36px">
-Scroll Up and Down this page to see the parallax scrolling effect.
-This div is just here to enable scrolling.
+
+
+
+
+        <!-- END SIDEBAR BUTTONS -->
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active" (click)="loadPage('comment')">
+              <a href="comment">
+							<i class="glyphicon glyphicon-home"></i>
+               comment 
+              </a>
+            </li>
+            <li>
+              <a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							message</a>
+            </li>
+            <li (click)="loadPage('offers')">
+              <a href="offers" target="_blank">
+							<i class="glyphicon glyphicon-ok"></i>
+							offers </a>
+            </li>
+            <li>
+              <a routerLink="/welcome">
+							<i class="glyphicon glyphicon-flag"></i>
+							logout </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="profile-content">
+        <div #comment>
+            <p>{{likevalue}}</p>
+          <app-comment></app-comment>
+        </div>
+
+        <div *ngIf=offers>
+          <app-offers></app-offers>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
 </div>
-<div class="paralla"></div>
-
+<router-outlet></router-outlet>

@@ -6,12 +6,25 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-myrides',
   templateUrl: './myrides.component.html',
   styleUrls: ['./myrides.component.css'],
-  providers:[connect]
+  providers: [connect]
 })
 export class MyridesComponent implements OnInit {
+
   headerData: any;
-  
-  constructor(private service: connect) {
+  m: any;
+  n: any;
+  username: any;
+  // date: any;
+  // dateValue;
+
+  constructor(private ridevalues: connect) {
+
+    // this.date = this.n.date;
+    // var day = this.date.getDate();
+    // var month = this.date.getMonth();
+    // var year = this.date.getFullYear();
+    // this.dateValue = "you selected " + day + "  " + month + " " + year;
+
 
     this.headerData = [
       {
@@ -22,18 +35,19 @@ export class MyridesComponent implements OnInit {
         "fare": "Fare"
       }
     ]
+sessionStorage.time=this.n.time;
+    console.log(sessionStorage.username);
+    this.username = sessionStorage.username;
+    var uid = sessionStorage.userid;
+    this.ridevalues.getUserEnteredData(uid).subscribe(response => {
+      this.m = response.json();
+      this.n = this.m.event;
+      console.log(this.n);
 
 
+    })
   }
-// getData(){
-//   this.service.getUserEnteredData().subscribe(response=>{
-//     console.log(response);
-//     let m=response.json();
-//     if(m == true){
-//      console.log(m);
-//     }
-//   })
-// }
+
   ngOnInit() {
   }
 

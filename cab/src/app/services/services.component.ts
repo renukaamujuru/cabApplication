@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import {MapsAPILoader} from 'angular2-google-maps/core';
+
 
 
   
@@ -10,9 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ServicesComponent implements OnInit {
- 
-  constructor() { }
-
+  google: any;
+  constructor( ) { }
+// autocomplete() {
+//         this._loader.load().then(() => {
+//             let autocomplete = new google.maps.places.Autocomplete(<HTMLInputElement>document.getElementById("autocompleteInput"), {});
+//             google.maps.event.addListener(autocomplete, 'place_changed', () => {
+//                 let place = autocomplete.getPlace();
+//                 console.log(place);
+//             });
+//         });
+// }
   ngOnInit() {
   }
 

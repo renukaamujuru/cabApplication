@@ -1,0 +1,25 @@
+textarea {
+  padding: 10px;
+  width: 400px;
+  min-height: 150px;
+  max-height: auto;
+}
+
+button {
+  margin-left: 100px;
+}
+
+.container {
+  background-color: white;
+  width: 600px;
+  margin: 10px;
+  min-height: 200px;
+  max-height: auto;
+}
+.user_name{
+    font-size:14px;
+    font-weight: bold;
+}
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}

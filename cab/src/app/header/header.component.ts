@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 private navlist=[
-  {
+  { 
     "name":"Home",
     "link":"/home"
   },

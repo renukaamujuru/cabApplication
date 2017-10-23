@@ -2,10 +2,10 @@
 
   <div *ngFor="let item of inputedData">
     <h4>your fair from {{item.location}} to {{item.destination}} is:{{item.fare}}</h4>
-    <h4> {{item.dateValue}}</h4>
+ 
     <app-google-map></app-google-map>
 
-    <button class="btn btn-md btn-danger btn-signin" name="submit" type="submit"  (click)="transform(date)">Book Now</button>
-<p>you selected time{{formattedDate}} </p>
+    <button class="btn btn-md btn-danger btn-signin" name="submit" type="submit" (click)="submit(item)" >Book Now</button>
+
   </div>
 </div>

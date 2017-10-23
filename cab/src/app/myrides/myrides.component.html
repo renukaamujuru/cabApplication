@@ -31,58 +31,13 @@
         </tfoot>
 
         <tbody>
-          <tr>
-            <td>Tiger Nixon</td>
-            <td>hh</td>
-            <td>Edinburgh</td>       
-            <td>2011/04/25</td>
-            <td>$320,800</td>           
+          <tr  *ngFor="let values of n">
+            <td>{{username}}</td>
+            <td>{{values.location}}</td>
+            <td>{{values.destination}}</td>       
+            <td>{{values.time}}</td>
+            <td>{{values.fare}}</td>           
           </tr>
-
-
-          <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>       
-            <td>2011/04/25</td>
-            <td>$320,800</td>           
-          </tr>
-          <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>       
-            <td>2011/04/25</td>
-            <td>$320,800</td>           
-          </tr>
-          <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>       
-            <td>2011/04/25</td>
-            <td>$320,800</td>           
-          </tr>
-          <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>       
-            <td>2011/04/25</td>
-            <td>$320,800</td>           
-          </tr>
-           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>       
-            <td>2011/04/25</td>
-            <td>$320,800</td>           
-          </tr>
-           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>       
-            <td>2011/04/25</td>
-            <td>$320,800</td>           
-          </tr>
-
         </tbody>
       </table>
 

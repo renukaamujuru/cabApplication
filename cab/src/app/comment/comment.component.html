@@ -1,0 +1,73 @@
+<!-- <form class="form-horizontal" id="commentForm" [formGroup]="form" name="form">
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Comment</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" formControlName="addComment" name="addComment" id="addComment" rows="5" [(ngModel)]="comment"></textarea>
+    </div>
+  </div>
+  <button class="btn btn-success btn-md" (click)="submit(form)">save your comment</button>
+ <div class="container">
+ </div> -->
+
+
+
+
+
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a data-toggle="tab" href="#addComments">Add Comment</a></li>
+    <li><a data-toggle="tab" href="#comments">comments</a></li>
+
+  </ul>
+  <div class="tab-content">
+
+
+    <div id="addComments" class="tab-pane fade in active">
+      <form class="form-horizontal" id="commentForm" [formGroup]="form" name="form">
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Comment</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" formControlName="addComment" name="addComment" id="addComment" rows="5" [(ngModel)]="comment"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-success btn-md" name="submit" type="submit" (click)="submit(form)">save your comment</button>
+      </form>
+
+
+    </div>
+    <div id="comments" class="tab-pane fade">
+
+
+      <div class="row">
+        <div class="col-md-8">
+          <p>{{likevalue}}</p>
+          <div class="page-header">
+            <h1><small class="pull-right">{{count}} comments</small> Comments </h1>
+          </div>
+          <div class="comments-list">
+            <div class="media">
+              <p class="pull-right"><small>recently</small></p>
+              <a class="media-left" href="#">
+                  <img src="http://lorempixel.com/40/40/people/1/">
+              </a>
+              
+                  <div class="media-body">
+
+                    <h4 class="media-heading user_name">{{ username}}</h4>
+                    {{storecomment}}
+
+                    <p><small><a id="like"  (click)="likeOutput()">Like</a> - <a >Share</a></small></p>
+                  </div>
+                 
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>

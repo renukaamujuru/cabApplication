@@ -18,7 +18,7 @@ export class connect {
     postUserEnteredData(enteredDetails) {
         return this.http.post('http://localhost:3456/api/UserEnteredData', enteredDetails);
     }
-    // getUserEnteredData(){
-    //     return this.http.get('http://localhost:3456/api/getUserEnteredData');
-    // }
+    getUserEnteredData(data){
+        return this.http.get('http://localhost:3456/api/getUserEnteredData/'+data);
+    }
 }
