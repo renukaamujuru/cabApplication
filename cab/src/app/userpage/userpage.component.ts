@@ -17,7 +17,7 @@ private date;
   }
 private navlist=[
   {
-    "name":"Home",
+    "name":"profile",
     "link":"/home"
   },
   {

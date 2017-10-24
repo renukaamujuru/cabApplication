@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 @Injectable()
 export class connect {
-    private headers = new Headers({ 'Content-Type': 'appliaction/json' });
+    private headers = new Headers({ 'Content-Type': 'application/json' });
     constructor(private http: Http) {
-
     }
     postRegisterData(data) {
         return this.http.post('http://localhost:3456/api/register', data);

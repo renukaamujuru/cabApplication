@@ -35,7 +35,6 @@ export class MyridesComponent implements OnInit {
         "fare": "Fare"
       }
     ]
-sessionStorage.time=this.n.time;
     console.log(sessionStorage.username);
     this.username = sessionStorage.username;
     var uid = sessionStorage.userid;

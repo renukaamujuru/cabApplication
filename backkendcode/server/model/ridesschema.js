@@ -12,10 +12,10 @@ var ridesschema=new Schema({
     destination:{
         type:String
     },
-     time:{
-        type:Date,
-        default:Date.now
-    } ,
+     time : { 
+         type : Date, 
+         default: Date.now 
+        },
     userid:{
         type:String,
         index:true
